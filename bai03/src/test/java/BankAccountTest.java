@@ -61,4 +61,33 @@ public class BankAccountTest {
         assertEquals(300, bankAccount1.getBalance());
     }
 
+    @Test
+    public void testDefaultConstructor(){
+        BankAccount acc = new BankAccount("C001", "Test User");
+        assertEquals(0.0, acc.getBalance());
+        assertEquals("C001", acc.getAccountNumber());
+    }
+
+    @Test
+    public void testConstructorNegativeBalance(){
+        BankAccount acc = new BankAccount("C002", "Test User", -1000.0);
+        assertEquals(0.0, acc.getBalance());
+    }
+
+    @Test
+    public void testWithdrawNegative(){
+        assertThrows(IllegalArgumentException.class, () -> bankAccount.withdraw(-100));
+    }
+
+    @Test
+    public void testWithdrawZero(){
+        assertThrows(IllegalArgumentException.class, () -> bankAccount.withdraw(0));
+    }
+
+    @Test
+    public void testGetters(){
+        assertEquals("A0946873", bankAccount.getAccountNumber());
+        assertEquals("Bui Huyen Ly", bankAccount.getOwnerName());
+    }
+
 }

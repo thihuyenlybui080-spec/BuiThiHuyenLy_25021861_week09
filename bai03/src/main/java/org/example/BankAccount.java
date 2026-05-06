@@ -77,4 +77,7 @@ public class BankAccount {
         return accountNumber;
     }
 
+    public String getOwnerName() {
+        return ownerName;
+    }
 }
