@@ -84,6 +84,7 @@ public class BankAccountTest {
         assertThrows(IllegalArgumentException.class, () -> bankAccount.withdraw(0));
     }
 
+    //test các hàm getter
     @Test
     public void testGetters(){
         assertEquals("A93049353", bankAccount.getAccountNumber());
