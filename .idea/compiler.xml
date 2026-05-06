@@ -6,14 +6,21 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="bai01" />
         <module name="untitled" />
+        <module name="bai03 (1)" />
+        <module name="bai03 (2)" />
+        <module name="bai01" />
         <module name="bai04" />
         <module name="bai02" />
-        <module name="bai03" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="bai03" target="17" />
+      <module name="bai03 (2)" target="17" />
+      <module name="bai07_week8" target="25" />
+      <module name="bai08_week8" target="25" />
+      <module name="bai09_week8" target="1.5" />
+      <module name="bai09_week8 (1)" target="25" />
       <module name="untitled" target="25" />
     </bytecodeTargetLevel>
   </component>

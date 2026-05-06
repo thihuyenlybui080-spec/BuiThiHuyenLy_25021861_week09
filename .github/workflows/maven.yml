@@ -23,14 +23,38 @@ jobs:
           distribution: temurin
           cache: maven
 
-      - name: Run tests
-        run: mvn test -f bai03/pom.xml
+      - name: Run tests - bai01
+        run: mvn test -f bai01/pom.xml
 
-      - name: Build and package
-        run: mvn package -f bai03/pom.xml -DskipTests
+      - name: Verify coverage - bai01 (JaCoCo)
+        run: mvn verify -f bai01/pom.xml
 
       - name: Upload JAR
         uses: actions/upload-artifact@v4
         with:
-          name: mathutils-jar
+          name: bai03-jar-${{ matrix.os }}
           path: bai03/target/*.jar
+
+      - name: Upload JaCoCo report - bai01
+        uses: actions/upload-artifact@v4
+        with:
+          name: bai01-jacoco-report-${{ matrix.os }}
+          path: bai01/target/site/jacoco/
+
+      - name: Run tests - bai03
+        run: mvn test -f bai01/pom.xml
+
+      - name: Verify coverage - bai03 (JaCoCo)
+        run: mvn verify -f bai03/pom.xml
+
+      - name: Upload JAR
+        uses: actions/upload-artifact@v4
+        with:
+          name: bai03-jar-${{ matrix.os }}
+          path: bai03/target/*.jar
+
+      - name: Upload JaCoCo report - bai03
+        uses: actions/upload-artifact@v4
+        with:
+          name: bai03-jacoco-report-${{ matrix.os }}
+          path: bai03/target/site/jacoco/

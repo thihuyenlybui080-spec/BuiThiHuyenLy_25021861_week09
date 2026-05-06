@@ -9,10 +9,15 @@
         <option value="$PROJECT_DIR$/bai03/pom.xml" />
         <option value="$PROJECT_DIR$/untitled/pom.xml" />
         <option value="$PROJECT_DIR$/bai04/pom.xml" />
+        <option value="$PROJECT_DIR$/bai03/bai09_week8/pom.xml" />
+        <option value="$PROJECT_DIR$/bai03/bai08_week8/pom.xml" />
+        <option value="$PROJECT_DIR$/bai03/bai07_week8/pom.xml" />
+        <option value="$PROJECT_DIR$/bai3/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/bai3/pom.xml" />
         <option value="$PROJECT_DIR$/untitled/pom.xml" />
       </set>
     </option>
