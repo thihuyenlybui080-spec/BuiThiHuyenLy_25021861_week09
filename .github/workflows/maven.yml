@@ -1,0 +1,26 @@
+name: Java CI
+
+on:
+  - push
+  - pull_request
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: temurin
+
+      - name: Build
+        run: mvn package
+
+      - name: Upload JAR
+        uses: actions/upload-artifact@v4
+        with:
+          name: week8-jar
+          path: target/*.jar
