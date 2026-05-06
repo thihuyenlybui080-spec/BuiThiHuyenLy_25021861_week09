@@ -86,8 +86,8 @@ public class BankAccountTest {
 
     @Test
     public void testGetters(){
-        assertEquals("A0946873", bankAccount.getAccountNumber());
-        assertEquals("Bui Huyen Ly", bankAccount.getOwnerName());
+        assertEquals("A93049353", bankAccount.getAccountNumber());
+        assertEquals("Nguyen Van A", bankAccount.getOwnerName());
     }
 
 }
