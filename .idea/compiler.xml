@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="bai01" />
         <module name="untitled" />
+        <module name="bai04" />
         <module name="bai02" />
         <module name="bai03" />
       </profile>

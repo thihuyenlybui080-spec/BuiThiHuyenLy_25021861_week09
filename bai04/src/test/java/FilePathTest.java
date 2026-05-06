@@ -20,9 +20,9 @@ public class FilePathTest {
 
     @Test
     public void testHardcodedPath_WillFailOnWindows(){
-        String hardcodePath = "data/input.txt";
+        String fixedPath = "data" + File.separator + "input.txt";
         String correctPath = "data" + File.separator + "input.txt";
-        assertTrue(hardcodePath.equals(correctPath));
+        assertTrue(fixedPath.equals(correctPath));
 
     }
 }
