@@ -15,12 +15,14 @@ jobs:
         with:
           java-version: '17'
           distribution: temurin
+          cache: maven
 
-      - name: Build
-        run: mvn package
+
+      - name: Build and package
+        run: mvn package -f bai03/pom.xml -DskipTests
 
       - name: Upload JAR
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v3
         with:
-          name: week8-jar
-          path: target/*.jar
+          name: mathutils-jar
+          path: bai03/target/*.jar
