@@ -54,18 +54,18 @@ public class BankAccount {
 
     /**
      * Withdraws the given amount from this account
-     * @param amount
+     * @param _amount
      * @return
      */
-    public boolean withdraw(double amount) {
-        if (amount <= 0) {
+    public boolean withdraw(double _amount) {
+        if (_amount <= 0) {
             throw new IllegalArgumentException("Số tiền rút phải lớn hơn 0.");
         }
-        if (amount > this.balance) {
+        if (_amount > this.balance) {
             return false;
         }
-        this.balance -= amount;
-        logger.info("Da rut {} tu tai khoan {}. So du moi {}", amount, accountNumber, balance);
+        this.balance -= _amount;
+        logger.info("Da rut {} tu tai khoan {}. So du moi {}", _amount, accountNumber, balance);
         return true;
     }
 
