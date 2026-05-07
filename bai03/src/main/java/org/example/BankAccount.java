@@ -1,6 +1,8 @@
 package org.example;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import java.util.*;
+import java.time.*;
 
 /**
  * Represents a bank account with deposit and withdrawal operations.
@@ -8,17 +10,17 @@ import org.slf4j.LoggerFactory;
  */
 public class BankAccount {
     private static final Logger logger = LoggerFactory.getLogger(BankAccount.class);
-    private final String accountNumber;
+    private final String _accountNumber;
     private String ownerName;
     private double balance;
 
     /**
      * Constructs a BankAccount with zero initial balance
-     * @param accountNumber
+     * @param _accountNumber
      * @param ownerName
      */
-    public BankAccount(String accountNumber, String ownerName) {
-        this.accountNumber = accountNumber;
+    public BankAccount(String _accountNumber, String ownerName) {
+        this._accountNumber = _accountNumber;
         this.ownerName = ownerName;
         this.balance = 0.0;
     }
@@ -30,7 +32,7 @@ public class BankAccount {
      * @param initialBalance
      */
     public BankAccount(String accountNumber, String ownerName, double initialBalance) {
-        this.accountNumber = accountNumber;
+        this._accountNumber = accountNumber;
         this.ownerName = ownerName;
         if (initialBalance < 0) {
             logger.warn("Số dư ban đầu không hợp lệ: {}.  Gán mặc định là 0.", initialBalance);
@@ -40,16 +42,13 @@ public class BankAccount {
         }
     }
 
-    /**
-     * Deposits the given amount into this account
-     * @param amount
-     */
+
     public void deposit(double amount) {
         if (amount <= 0) {
             throw new IllegalArgumentException("Số tiền nạp phải lớn hơn 0.");
         }
         this.balance += amount;
-        logger.info("Nap tien {} vao tai khoan {}. So du moi: {}", amount, accountNumber, balance);
+        logger.info("Nap tien {} vao tai khoan {}. So du moi: {}", amount, _accountNumber, balance);
     }
 
     /**
@@ -65,7 +64,7 @@ public class BankAccount {
             return false;
         }
         this.balance -= amount;
-        logger.info("Da rut {} tu tai khoan {}. So du moi {}", amount, accountNumber, balance);
+        logger.info("Da rut {} tu tai khoan {}. So du moi {}", amount, _accountNumber, balance);
         return true;
     }
 
@@ -74,11 +73,11 @@ public class BankAccount {
     }
 
     public String getAccountNumber() {
-        return accountNumber;
+        return _accountNumber;
     }
-
     public String getOwnerName() {
         return ownerName;
     }
-    // them de so sanh second run
+    //them de sua
+
 }

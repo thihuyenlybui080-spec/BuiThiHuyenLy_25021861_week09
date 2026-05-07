@@ -126,7 +126,6 @@ public class Bank {
      */
 
     public String getCustomersInfoByNameOrder() {
-        // Vi phạm: Logic trùng lặp nhiều với hàm trên (Code Duplication)
         List<Customer> sorted = new ArrayList<Customer>(customerList);
         sorted.sort((c1, c2) -> {
             int result = c1.getFullName().compareTo(c2.getFullName());
