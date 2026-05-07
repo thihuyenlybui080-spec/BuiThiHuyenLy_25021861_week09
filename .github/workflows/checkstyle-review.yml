@@ -17,4 +17,6 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           reporter: github-pr-review
           checkstyle_config: google_checks.xml
-          level: error
+          level: warning
+          workdir: bai03/src/main/java/org.example
+          filter_mode: nofilter
