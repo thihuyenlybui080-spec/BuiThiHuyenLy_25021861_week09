@@ -1,0 +1,23 @@
+2026-05-07 14:33:09 [main] DEBUG org.example.WareHouse - Added product: F001
+2026-05-07 14:33:09 [main] DEBUG org.example.WareHouse - Added product: F002
+2026-05-07 14:33:09 [main] DEBUG org.example.WareHouse - Added product: F003
+2026-05-07 14:33:09 [main] DEBUG org.example.WareHouse - Added product: E001
+2026-05-07 14:33:09 [main] DEBUG org.example.WareHouse - Added product: E002
+2026-05-07 14:33:09 [main] DEBUG org.example.WareHouse - Added product: E003
+2026-05-07 14:33:09 [main] INFO  org.example.Main - === Kho Thuc Pham ===
+2026-05-07 14:33:09 [main] INFO  org.example.Food - Banh - 2024-12-31
+2026-05-07 14:33:09 [main] INFO  org.example.Food - Sua - 2024-06-01
+2026-05-07 14:33:09 [main] INFO  org.example.Food - Nuoc - 2025-01-15
+2026-05-07 14:33:09 [main] INFO  org.example.Main - === Kho Dien Tu ===
+2026-05-07 14:33:09 [main] INFO  org.example.Electronics - TiVi - 24 thang bao hanh
+2026-05-07 14:33:09 [main] INFO  org.example.Electronics - TuLanh - 12 thang bao hanh
+2026-05-07 14:33:09 [main] INFO  org.example.Electronics - MayGiat - 36 thang bao hanh
+2026-05-07 14:33:09 [main] INFO  org.example.Main - === Xuat kho F001 va E002 ===
+2026-05-07 14:33:09 [main] INFO  org.example.WareHouse - Exported product: F001
+2026-05-07 14:33:09 [main] INFO  org.example.WareHouse - Exported product: E002
+2026-05-07 14:33:09 [main] INFO  org.example.Main - === Kiem kho sau khi xuat ===
+2026-05-07 14:33:09 [main] INFO  org.example.Food - Sua - 2024-06-01
+2026-05-07 14:33:09 [main] INFO  org.example.Food - Nuoc - 2025-01-15
+2026-05-07 14:33:09 [main] INFO  org.example.Electronics - TiVi - 24 thang bao hanh
+2026-05-07 14:33:09 [main] INFO  org.example.Electronics - MayGiat - 36 thang bao hanh
+2026-05-07 14:33:09 [main] INFO  org.example.Main - === Application Finished ===

@@ -1,0 +1,20 @@
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v3
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: temurin
+          cache: maven
+
+      - name: Build and test bai10
+        run: mvn package -f bai10/pom.xml
