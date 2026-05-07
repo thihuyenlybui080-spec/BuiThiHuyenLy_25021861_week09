@@ -1,0 +1,20 @@
+name: Checkstyle Review
+
+on:
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  checkstyle:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v3
+
+      - name: Run Checkstyle and comment on PR
+        uses: dbelyaev/action-checkstyle@v1.11.1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          reporter: github-pr-review
+          checkstyle_config: google_checks.xml
+          level: warning

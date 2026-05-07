@@ -9,17 +9,17 @@ import org.slf4j.LoggerFactory;
 public class BankAccount {
     private static final Logger logger = LoggerFactory.getLogger(BankAccount.class);
     private final String accountNumber;
-    private String ownerName;
+    private String _ownerName;
     private double balance;
 
     /**
      * Constructs a BankAccount with zero initial balance
      * @param accountNumber
-     * @param ownerName
+     * @param _ownerName
      */
-    public BankAccount(String accountNumber, String ownerName) {
+    public BankAccount(String accountNumber, String _ownerName) {
         this.accountNumber = accountNumber;
-        this.ownerName = ownerName;
+        this._ownerName = _ownerName;
         this.balance = 0.0;
     }
 
@@ -31,7 +31,7 @@ public class BankAccount {
      */
     public BankAccount(String accountNumber, String ownerName, double initialBalance) {
         this.accountNumber = accountNumber;
-        this.ownerName = ownerName;
+        this._ownerName = ownerName;
         if (initialBalance < 0) {
             logger.warn("Số dư ban đầu không hợp lệ: {}.  Gán mặc định là 0.", initialBalance);
             this.balance = 0.0;
@@ -54,18 +54,18 @@ public class BankAccount {
 
     /**
      * Withdraws the given amount from this account
-     * @param _amount
+     * @param amount
      * @return
      */
-    public boolean withdraw(double _amount) {
-        if (_amount <= 0) {
+    public boolean withdraw(double amount) {
+        if (amount <= 0) {
             throw new IllegalArgumentException("Số tiền rút phải lớn hơn 0.");
         }
-        if (_amount > this.balance) {
+        if (amount > this.balance) {
             return false;
         }
-        this.balance -= _amount;
-        logger.info("Da rut {} tu tai khoan {}. So du moi {}", _amount, accountNumber, balance);
+        this.balance -= amount;
+        logger.info("Da rut {} tu tai khoan {}. So du moi {}", amount, accountNumber, balance);
         return true;
     }
 
@@ -77,7 +77,7 @@ public class BankAccount {
         return accountNumber;
     }
     public String getOwnerName() {
-        return ownerName;
+        return _ownerName;
     }
     //them de sua
 
